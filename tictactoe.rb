@@ -30,6 +30,7 @@ end
 
 
 def pb(arr)
+	system ("clear")
 i=0
 while (i<9)
 	puts arr[i] +   arr[i+1] +   arr[i+2]
@@ -37,35 +38,44 @@ while (i<9)
 end
 end
 pb(board)
+puts "give no. from 1 to 9"
 while true
+	pb(board)
+puts"player1 chance"
 while true 
-print"player1 chance"
+
+
 n=gets.chomp
 n=n.to_i
-if board[n-1]=='.'
+if board[n-1]=='.' && n>=1 &&n<=9
 board[n-1]='x'
 break
 else puts" try again"
 end
 end
 
-pb(board)
+
 if win(board,'x') 
+	pb(board)
 	puts"player1 wins"
 	break
 end
 if draw(board)
+	pb(board)
 	puts "match draw"
+	
 	break
 end
 
-
+pb(board)
+puts "player2 chance"
 
 while true
-print"player2 chance"
+
+
 n=gets.chomp
 n=n.to_i
-if board[n-1]=='.'
+if board[n-1]=='.' && n>=1 &&n<=9
 	 board[n-1]='y'
 
 	break 
@@ -73,9 +83,11 @@ else
 	puts"try again"
 end
 end
-pb(board)
+
 if win(board,'y') 
+	pb(board)
 	puts"player2 wins"
+
 	break
 end
 end
