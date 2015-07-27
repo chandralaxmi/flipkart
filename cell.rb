@@ -1,15 +1,11 @@
+
+#This class defines a cell i.e attributes of each block in the tic tac toe game. It has ocupiedBy attribute which says about the block that which player occupies it.
+
+
 class Cell
-	def initialize
+    attr_accessor :occupiedBy
+    def initialize
 		@occupiedBy=0
 	end
-	def occupiedBy
-		@occupiedBy
-	end
-	def occupiedBy=some
-		if some==1 || some==2
-		@occupiedBy=some 
-		else
-		puts "Player can only be 1 or 2"
-		end
-		end
-		end
+	
+end
