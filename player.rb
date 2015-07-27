@@ -1,9 +1,12 @@
+
+#Player class which defines attributes of players
+
+
 class Player
-	def initialize(nam,numbe)
+    attr_reader :name
+    def initialize(nam,numbe)
 		@name=nam
 		@number=numbe
 	end
-	def name
-		@name
-	end
+	
 end
