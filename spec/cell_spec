@@ -1,0 +1,11 @@
+require_relative '../cell.rb'
+RSpec.describe Cell, "#new" do
+	it "initializes the cell to default value 0" do
+		cell=Cell.new
+		expect(cell.occupiedBy).to eq 0
+	end
+
+	
+end
+
+
